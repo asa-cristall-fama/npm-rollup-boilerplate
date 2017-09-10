@@ -1,0 +1,13 @@
+{
+  "ignore": ["dist/*.js"],
+  "env": {
+    "commonjs": {
+      "presets": [["es2015", { "modules": false }]],
+      "plugins": ["external-helpers", "transform-es2015-modules-commonjs"]
+    },
+    "es": {
+      "presets": [["es2015", { "modules": false }]],
+      "plugins": ["external-helpers"]
+    }
+  }
+}

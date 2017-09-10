@@ -1,0 +1,6 @@
+{
+  "jest": {
+    "verbose": true
+  },
+  "transform": {}
+}
