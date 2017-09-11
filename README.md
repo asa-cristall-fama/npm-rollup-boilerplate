@@ -6,12 +6,15 @@ need it in your examples) and jest.
 [![Build Status](https://travis-ci.org/asa-cristall-fama/npm-rollup-boilerplate.svg?branch=master)](https://travis-ci.org/asa-cristall-fama/npm-rollup-boilerplate)
 [![dependencies Status](https://david-dm.org/asa-cristall-fama/npm-rollup-boilerplate/status.svg)](https://david-dm.org/asa-cristall-fama/npm-rollup-boilerplate)
 [![devDependencies Status](https://david-dm.org/asa-cristall-fama/npm-rollup-boilerplate/dev-status.svg)](https://david-dm.org/asa-cristall-fama/npm-rollup-boilerplate?type=dev)
+[![Known Vulnerabilities](https://snyk.io/test/github/asa-cristall-fama/npm-rollup-boilerplate/badge.svg)](https://snyk.io/test/github/asa-cristall-fama/npm-rollup-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/asa-cristall-fama/npm-rollup-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/asa-cristall-fama/npm-rollup-boilerplate?branch=master)
 
 ## Features
 * Build with [rollup](https://webpack.js.org/) and [babel](https://babeljs.io/)
 * Test and cover with [jest](https://facebook.github.io/jest/)
 * Lint with [eslint](http://eslint.org/) ([air-bnb config](https://github.com/airbnb/javascript))
 * CI with [travis-ci.org](https://travis-ci.org/)
+* Coverage info with [coveralls.io](https://coveralls.io)
 
 ## Quick start
 
