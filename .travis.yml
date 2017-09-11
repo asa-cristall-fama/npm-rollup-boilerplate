@@ -11,5 +11,4 @@ branches:
     - master
 cache:
   directories:
-  - examples/react-hello-world/node_modules
-  - examples/vanilla-hello-world/node_modules
+  - node_modules
