@@ -1,4 +1,11 @@
-const folks = 'folks';
-const library = () => `That's all ${folks}!`;
+import thats from './es-module';
 
-export default library;
+const all = require('./cjs-module');
+
+const greetings = `${thats} ${all} folks!`;
+
+class Library {
+  sayHello = () => greetings
+}
+
+export default new Library();

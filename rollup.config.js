@@ -1,21 +1,25 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
+import pkg from './package.json';
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || 'development';
 const config = {
-  format: 'umd',
-  moduleName: 'Library',
+  input: 'src/index.js',
+  output: {
+    name: 'library',
+    file: pkg.browser,
+    format: 'umd',
+  },
   plugins: [
-    nodeResolve({
-      jsnext: true,
-    }),
-    babel({
-      exclude: 'node_modules/**',
-    }),
+    resolve(),
+    babel({ babelrc: true }),
+    commonjs(),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(env),
+      __DEV__: (env === 'development'),
+      __PROD__: (env === 'production'),
     }),
   ],
 };
@@ -29,7 +33,7 @@ if (env === 'production') {
         unsafe_comps: true,
         warnings: false,
       },
-    })
+    }),
   );
 }
 
